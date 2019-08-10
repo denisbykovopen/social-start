@@ -22,46 +22,19 @@ code {
   position: sticky;
   position: -webkit-sticky;
   z-index: 10;
-  display: flex;
+  /* display: flex; */
   background-color: #ffffff;
   width: 100%;
   top: 0;
+  padding: 5% 0;
 }
-/* .header-nav-li img {
-  height: 75%;
-  align-self: center;
-} */
 .header-nav-li {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 50%;
+  justify-content: space-evenly;
 }
-.header-nav li,
-.header-nav a {
+.header-nav-li li {
   list-style: none;
   text-decoration: none;
   cursor: pointer;
-  color: #4d4d4d;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-}
-.header-nav li:hover,
-.header-nav a:hover {
-  color: #6de583;
-}
-.header-nav-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-}
-.header-nav-li li,
-.header-nav-button li {
-  margin: 0 5%;
-}
-.header-nav-button .selected button {
-  background: #6de583;
 }

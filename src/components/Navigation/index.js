@@ -1,7 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import '../../index.css';
+import Logo from '../../Assets/logo_mob.svg';
+import Catalog from '../../Assets/configurator_menu.svg';
+import Search from '../../Assets/search_menu.svg';
+import UserAvatar from '../../Assets/noavatar.svg';
+import Notifications from '../../Assets/alert_menu.svg';
+import Menu from '../../Assets/burger_menu.svg';
+
 // import * as ROLES from '../../constants/roles';
 
 // const Navigation = ({ authUser }) =>
@@ -37,17 +44,67 @@ const Navigation = () => (
   <div
     className="header-nav"
   >
-    <ul>
+    <ul
+      className="header-nav-li"  
+    >
       <li>
-        <Link to={ROUTES.LANDING}>Landing</Link>
+        <NavLink exact
+          to={ROUTES.LANDING}
+        >
+          <img
+            src={Logo}
+            alt="Logo"
+            // style={{
+            //   height: "50vh",
+            //   width:"50vh",
+            //   marginTop: "5%"
+            // }}
+          />
+        </NavLink>
       </li>
       <li>
-        <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+        <NavLink 
+          to={ROUTES.CATALOG}
+        >
+          <img
+            src={Catalog}
+            alt="Catalog"
+          />
+        </NavLink>
       </li>
       <li>
-        <Link to={ROUTES.HOME}>Home</Link>
+        <NavLink 
+          to={ROUTES.SEARCH}
+        >
+          <img
+            src={Search}
+            alt="Search"
+          />
+        </NavLink>
       </li>
-      </ul>
+      <li>
+        <NavLink 
+          to={ROUTES.HOME}
+        >
+          <img
+            src={UserAvatar}
+            alt="Avatar"
+          />
+        </NavLink>
+      </li>
+      <li>
+          <img
+            src={Notifications}
+            alt="Notifications"
+          />
+      </li>
+      <li>
+          <img
+            src={Menu}
+            alt="Menu"
+          />
+      </li>
+    </ul>
   </div>
 );
 

@@ -8,6 +8,8 @@ import LandingPage from '../Landing';
 import HomePage from '../Home';
 import * as ROUTES from '../../constants/routes';
 import Footer from '../Footer';
+import Catalog from '../Catalog';
+import Search from '../Search';
 
 const App = () => (
   <Router>
@@ -29,6 +31,8 @@ const App = () => (
               component={PasswordForgetPage}
             /> */}
             <Route path={ROUTES.HOME} component={HomePage} />
+            <Route path={ROUTES.CATALOG} component={Catalog} />
+            <Route path={ROUTES.SEARCH} component={Search} />
           </Switch>
         </div>
       <Footer />

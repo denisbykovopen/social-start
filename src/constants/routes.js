@@ -6,3 +6,5 @@ export const HOME = '/home';
 // export const PASSWORD_FORGET = '/pw-forget';
 // export const ANOTHER = '/another';
 // export const ANOTHER_DETAILS = '/another/:id';
+export const CATALOG = '/catalog';
+export const SEARCH = '/search';
