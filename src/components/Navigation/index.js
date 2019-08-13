@@ -5,7 +5,7 @@ import '../../index.css';
 import Logo from '../../Assets/logo_mob.svg';
 import Catalog from '../../Assets/configurator_menu.svg';
 import Search from '../../Assets/search_menu.svg';
-import UserAvatar from '../../Assets/noavatar.svg';
+import UserAvatar from '../../Assets/empty-avatar.svg';
 import Notifications from '../../Assets/alert_menu.svg';
 import Menu from '../../Assets/burger_menu.svg';
 
@@ -54,11 +54,6 @@ const Navigation = () => (
           <img
             src={Logo}
             alt="Logo"
-            // style={{
-            //   height: "50vh",
-            //   width:"50vh",
-            //   marginTop: "5%"
-            // }}
           />
         </NavLink>
       </li>
@@ -84,7 +79,7 @@ const Navigation = () => (
       </li>
       <li>
         <NavLink 
-          to={ROUTES.HOME}
+          to={ROUTES.USER}
         >
           <img
             src={UserAvatar}

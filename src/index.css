@@ -38,3 +38,56 @@ code {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+.app-inner {
+  height: 88vh;
+  background-color: whitesmoke;
+}
+
+/* Footer */
+.footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  padding-top: 5%;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+.footer-nav li,
+.footer-nav a {
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  align-self: center;
+  margin: 1% 0;
+}
+.footer-nav li:hover,
+.footer-nav a:hover {
+  color: darkgray;
+}
+.footer-cluster {
+  display: flex;
+  flex-direction: column;
+}
+.footer-cluster-row {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  margin: 1% 0;
+}
+.footer-cluster-row span {
+  margin: 5px;
+}
+.sub-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: whitesmoke;
+  color: grey;
+  padding: 5%;
+}
