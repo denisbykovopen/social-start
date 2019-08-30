@@ -1,0 +1,24 @@
+# Ver.01
+# Pipeline for build and deploy React App to AWS S3 bucket
+# Runs by commit to Master with tag "build-*" (e.g. build-01 or build-front-run) or manually from branch tab
+
+
+image: nikolaik/python-nodejs
+
+pipelines:
+  tags:
+    'build-*':
+      - step:
+          name: build and deploy
+          caches:
+            - node
+          script:
+            - npm install
+            #- npm audit fix --force
+            - npm test
+            - CI=false npm run build
+            - pip install awscli --upgrade --ignore-installed six
+            - aws s3 sync ./build s3://paf-frontend
+            - aws s3 cp --cache-control max-age=0 ./build/service-worker.js s3://paf-frontend/
+
+
