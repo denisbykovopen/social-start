@@ -39,7 +39,6 @@ const UserPage = () => (
       <div className="plank"></div>
       <PhotoGallery />
       <div className="plank"></div>
-      
     </div>
   </div>
 );
