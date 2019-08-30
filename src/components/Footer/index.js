@@ -14,6 +14,9 @@ export default class Footer extends React.Component {
         <img
           src={LogoDesk}
           alt='pets&friends'
+          style={{
+            height: '25px'
+          }}
         />
         <ul className="footer-nav">
           <li>

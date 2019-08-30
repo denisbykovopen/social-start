@@ -7,7 +7,8 @@ import Catalog from '../../Assets/configurator_menu.svg';
 import Search from '../../Assets/search_menu.svg';
 import UserAvatar from '../../Assets/empty-avatar.svg';
 import Notifications from '../../Assets/alert_menu.svg';
-import Menu from '../../Assets/burger_menu.svg';
+import MenuButton from './MenuButton';
+
 
 // import * as ROLES from '../../constants/roles';
 
@@ -94,10 +95,7 @@ const Navigation = () => (
           />
       </li>
       <li>
-          <img
-            src={Menu}
-            alt="Menu"
-          />
+          <MenuButton />
       </li>
     </ul>
   </div>
