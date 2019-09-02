@@ -5,40 +5,37 @@ import UserGray from '../../Assets/user_gray.svg';
 
 export default class ImageBG extends React.Component {
     state = {
-        img: ''
+        image: '' 
     }
-    handleNewImage = e => {
-        let file = e.target.files[0];
-        // console.log(file);
-        this.setState({ img: file });
-        // this.setState({ img: e.target.files[0] });
+    onImageChange = (event) => {
+        if (event.target.files && event.target.files[0]) {
+          let reader = new FileReader();
+          reader.onload = (e) => {
+            this.setState({image: e.target.result});
+          };
+          reader.readAsDataURL(event.target.files[0]);
+        }
     }
-    // onImageChange = (event) => {
-    //     if (event.target.files && event.target.files[0]) {
-    //       this.setState({
-    //         img: URL.createObjectURL(event.target.files[0])
-    //       },
-    //       console.log('console', this.state.img));
-    //       console.log('console', this.state.img);
-    //     }
-    // }
-    // componentDidMount() {
-    //     this.onImageChange();
-    // }
     render() {
         return(
             <div 
                 className="image-bg"
                 style={{
-                    backgroundImage:  `url(${this.state.img})`
+                    backgroundImage:  `url(${this.state.image})`
                 }}
             >
-                {/* <img src={this.state.img} alt="img" /> */}
-                <span>Привет, загрузите свою обложку</span>
-                <img
-                    src={DownLoad}
-                    alt="Here"
-                />
+               
+                {!this.state.image 
+                    &&  <React.Fragment>
+                            <span>Привет, загрузите свою обложку</span>
+                            <img
+                                src={DownLoad}
+                                alt="Here"
+                            />
+                        </React.Fragment>  
+                }
+
+                
                 <div className="image-bg-upload">
                     <label htmlFor="image-bg-input">
                         <img
@@ -49,9 +46,8 @@ export default class ImageBG extends React.Component {
                     <input
                         id="image-bg-input"
                         type="file" 
-                        onChange={this.handleNewImage} 
                         onChange={this.onImageChange}
-                        capture style={{display: 'none'}}  
+                        // capture style={{display: 'none'}}  
                     />
                 </div>
             </div>

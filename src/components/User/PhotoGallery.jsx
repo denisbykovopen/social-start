@@ -23,7 +23,7 @@ export default class PhotoGallery extends React.Component {
   deleteImage() {
     if (
       window.confirm(
-        `Are you sure you want to delete image number ${
+        `Вы уверенны что хотите удалить это изображение? ${
           this.state.currentImage
         }?`
       )
@@ -61,20 +61,24 @@ export default class PhotoGallery extends React.Component {
           />
         </div>
         <Gallery
+          className="images"
           images={this.state.images}
           enableLightbox={true}
           enableImageSelection={false}
           currentImageWillChange={this.onCurrentImageChange}
           maxRows={2}
           rowHeight={80}
-          margin={0}
+          margin={2}
           backdropClosesModal={true}
           preloadNextImage={true}
           showLightboxThumbnails={true}
           customControls={[
+            <>
             <button key="deleteImage" onClick={this.deleteImage}>
-              Delete Image
+              Удалить
             </button>
+            <button key="wtf">Ghtn</button>
+            </>
           ]}
         />
       </div>
