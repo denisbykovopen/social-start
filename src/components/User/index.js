@@ -42,6 +42,7 @@ const UserPage = () => (
       <Gallery />
       <div className="plank"></div>
       <PostFeed />
+      <div className="plank"></div>
     </div>
   </div>
 );

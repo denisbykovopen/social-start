@@ -5,10 +5,12 @@ import EditComponent from './EditComponent';
 class AllPost extends Component {
   render() {
     return (
-      <div>
-        <h1 className="post_heading"></h1>
+      <div className="all-post">
         {this.props.posts.map(post => (
-          <div key={post.id}>
+          <div 
+            key={post.id}
+            className="all-post-main"
+          >
             {post.editing ? (
               <EditComponent post={post} key={post.id} />
             ) : (

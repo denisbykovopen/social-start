@@ -16,8 +16,9 @@ export default class PostFeed extends React.Component {
         return(
             <div className="post-feed">
                 <div className="post-feed-inner">
+                    <h3>Стена</h3>
                     <div 
-                        className="constructor-button"
+                        className="post-feed-button"
                         onClick={this.handlePost}
                     >
                         <img

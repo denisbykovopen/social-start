@@ -12,8 +12,8 @@ export default class App extends React.Component {
     rotate: 0,
     borderRadius: 100,
     preview: null,
-    width: 150,
-    height: 150
+    width: 125,
+    height: 125
   };
 
   handleNewImage = e => {

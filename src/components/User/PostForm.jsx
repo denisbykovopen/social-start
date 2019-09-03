@@ -56,28 +56,31 @@ class PostForm extends Component {
   };
   render() {
     return (
-      <div className="post-container">
-        <h1 className="post_heading">Поделись новостью!</h1>
-        <form className="form" onSubmit={this.handleSubmit}>
+      <div className="post-form-container">
+        <h3 className="post-form-heading">Поделись новостью!</h3>
+        <form className="post-form" onSubmit={this.handleSubmit}>
           <input
             required
             type="text"
             ref={input => (this.getTitle = input)}
-            placeholder="Название"
+            placeholder="Заглавие"
           />
           <textarea
             required
-            rows="5"
+            // rows="5"
             ref={input => (this.getMessage = input)}
-            cols="28"
+            // cols="35"
             placeholder="Введите текст"
           />
           <div className="image-upload-constructor">
                     <label htmlFor="image-input-constructor">
+                      <div className="image-input-constructor-inner">
                         <img
                             src={Camera}
                             alt="New avatar"
-                        />Добавить фото
+                        />
+                        <span>Добавить фото</span>
+                        </div>
                     </label>
                     <input
                         id="image-input-constructor"
@@ -86,7 +89,7 @@ class PostForm extends Component {
                         // capture style={{display: 'none'}}  
                     />
           </div>
-          <button>Post</button>
+          <button className="post-form-button">Опубликовать</button>
         </form>
       </div>
     );
