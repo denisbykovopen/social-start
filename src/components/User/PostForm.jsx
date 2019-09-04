@@ -53,6 +53,7 @@ class PostForm extends Component {
     });
     this.getTitle.value = '';
     this.getMessage.value = '';
+    this.state.images = [];
   };
   render() {
     return (
@@ -60,7 +61,7 @@ class PostForm extends Component {
         <h3 className="post-form-heading">Поделись новостью!</h3>
         <form className="post-form" onSubmit={this.handleSubmit}>
           <input
-            required
+            // required
             type="text"
             ref={input => (this.getTitle = input)}
             placeholder="Заглавие"

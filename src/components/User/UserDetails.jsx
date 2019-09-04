@@ -3,7 +3,7 @@ import StarRatingComponent from 'react-star-rating-component';
 import Mistake from '../../Assets/mistake.svg';
 import RatingGray from '../../Assets/rating_gray_small.svg';
 import RatingActive from '../../Assets/rating_active_small.svg';
-
+import BigRatingGray from '../../Assets/rating_gray_large.svg';
 
 export default class UserDetails extends React.Component {
     constructor(props) {

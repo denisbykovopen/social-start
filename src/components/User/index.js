@@ -14,6 +14,7 @@ import PostFeed from './PostsFeed';
 const UserPage = () => (
   <div className="user-page">
     <div className="user-page-inner">
+    <div className="plank"></div>
       <ImageBG />
       <Avatar />
       <UserDetails />
