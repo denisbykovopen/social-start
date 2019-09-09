@@ -10,9 +10,16 @@ import * as ROUTES from '../../constants/routes';
 import Footer from '../Footer';
 import Catalog from '../Catalog';
 import Search from '../Search';
+import 'typeface-roboto';
+
+const styles = {
+  root: {
+    fontFamily: 'Roboto',
+  },
+};
 
 const App = () => (
-  <Router>
+  <Router className={styles.root}>
     <div
       className="app"
       >

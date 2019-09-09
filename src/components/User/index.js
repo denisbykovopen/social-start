@@ -10,6 +10,8 @@ import * as ROUTES from '../../constants/routes';
 import { NavLink } from 'react-router-dom';
 import Gallery from './Gallery';
 import PostFeed from './PostsFeed';
+import About from './About/index';
+import Contacts from './Contacts/index';
 
 const UserPage = () => (
   <div className="user-page">
@@ -41,6 +43,10 @@ const UserPage = () => (
      
       <div className="plank"></div>
       <Gallery />
+      <div className="plank"></div>
+      <About />
+      <div className="plank"></div>
+      <Contacts />
       <div className="plank"></div>
       <PostFeed />
       <div className="plank"></div>

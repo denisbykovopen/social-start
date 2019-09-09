@@ -1,0 +1,32 @@
+.about {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  display: flex;
+  padding: 4%;
+}
+.about-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.about-row {
+  display: flex;
+  align-items: center;
+}
+.about-definitions {
+  min-width: 40%;
+  list-style: none;
+  color: #AEAEAE;
+}
+.about-data {
+  list-style: none;
+  width: 100%;
+}
+.about-data-hash {
+    color: #008D96; 
+}
+.about li {
+    margin: 0 0 4% 0;
+    /* width: 100%; */
+}

@@ -7,6 +7,7 @@ import App from './components/App';
 // import Firebase, { FirebaseContext } from './components/Firebase';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import "typeface-roboto";
 
 import postReducer from './Reducers/PostReducer';
 

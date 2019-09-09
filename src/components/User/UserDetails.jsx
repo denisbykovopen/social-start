@@ -1,9 +1,9 @@
 import React from 'react';
 import StarRatingComponent from 'react-star-rating-component';
 import Mistake from '../../Assets/mistake.svg';
-import RatingGray from '../../Assets/rating_gray_small.svg';
-import RatingActive from '../../Assets/rating_active_small.svg';
-import BigRatingGray from '../../Assets/rating_gray_large.svg';
+import RatingGray from '../../Assets/TrueStarGray.svg';
+import RatingActive from '../../Assets/TrueStarActive.svg';
+
 
 export default class UserDetails extends React.Component {
     constructor(props) {
@@ -30,6 +30,8 @@ export default class UserDetails extends React.Component {
             </div>
             <div className="user-rating">
               <StarRatingComponent
+                className={"stars"}
+                editing={false}
                 name="stars"
                 value={rating_custom_icon}
                 onStarClick={this.onStarClickCustomIcon.bind(this)}

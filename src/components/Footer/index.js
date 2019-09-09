@@ -5,7 +5,8 @@ import '../../index.css';
 import LogoDesk from '../../Assets/logo_Desk.svg';
 import EmailSmall from '../../Assets/email_small.svg';
 import PhoneSmall from '../../Assets/Связаться.svg';
-import InstaSmall from '../../Assets/instagram_small.svg';
+import InstaFooter from '../../Assets/Instagram_footer.svg';
+import FaceFooter from '../../Assets/Facebook_footer.svg';
 
 export default class Footer extends React.Component {
   render() {
@@ -54,17 +55,25 @@ export default class Footer extends React.Component {
           className="footer-cluster"
         >
           <div className="footer-cluster-row">
+            <a
+              href="tel:677"
+            >
             <img
               src={PhoneSmall}
               alt="Phone"
             />
+            </a>
             <span>+38 (099) 756 14 14</span>
           </div>
           <div className="footer-cluster-row">
+            <a
+              href="mailto:example@protonmail.com"
+            >
             <img
               src={EmailSmall}
               alt="Email"
             />
+            </a>
             <span>petsfriends@gmail.com</span>
           </div>
           <div className="footer-cluster-row">
@@ -72,7 +81,14 @@ export default class Footer extends React.Component {
             <a
               href="">
                 <img
-                  src={InstaSmall}
+                  src={FaceFooter}
+                  alt="Facebook"
+                />
+            </a>
+            <a
+              href="">
+                <img
+                  src={InstaFooter}
                   alt="Instagram"
                 />
             </a>
