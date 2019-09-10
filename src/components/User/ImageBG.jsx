@@ -8,13 +8,23 @@ export default class ImageBG extends React.Component {
         image: '' 
     }
     onImageChange = (event) => {
+        
         if (event.target.files && event.target.files[0]) {
           let reader = new FileReader();
           reader.onload = (e) => {
             this.setState({image: e.target.result});
           };
           reader.readAsDataURL(event.target.files[0]);
-        }
+          if(!event.target.files[0].type.match('images/*')) {
+            alert('только изображения');
+            reader.onload=(e)=>{
+                this.setState({image:''});
+            };
+            return;
+          };
+          event.preventDefault();
+        };
+
     }
     render() {
         return(
@@ -46,6 +56,7 @@ export default class ImageBG extends React.Component {
                     <input
                         id="image-bg-input"
                         type="file" 
+                        accept="image/*"
                         onChange={this.onImageChange}
                         // capture style={{display: 'none'}}  
                     />

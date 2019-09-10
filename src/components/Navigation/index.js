@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
-import '../../index.css';
+import './Navigation.css';
 import Logo from '../../Assets/logo_mob.svg';
 import Catalog from '../../Assets/configurator_menu.svg';
 import Search from '../../Assets/search_menu.svg';

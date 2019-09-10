@@ -1,0 +1,144 @@
+/* Header/Navigation */
+.header-nav {
+  background: #ffffff;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.04);
+  height: 10vh;
+  position: sticky;
+  z-index: 10;
+  background-color: #ffffff;
+  width: 100%;
+  top: 0;
+}
+.header-nav-li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.header-nav-li li {
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Menu */
+.menu-close {
+  z-index: 10;
+  position: fixed;
+  top: 10vh;
+  list-style: none;
+  box-sizing: border-box;
+  right: -100%;
+  max-height: 90vh;
+  transition: 0.25s ease-in;
+}
+.menu-open {
+  z-index: 10;
+  position: fixed;
+  top: 10vh;
+  background-color: white;
+  right: 0;
+  width: auto;
+  max-height: 90vh;
+  transition: 0.25s ease-out;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.dimmed-menu-bg {
+  position: fixed;
+  width: 100%;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+.menu-bg {
+  /* position: fixed;   */
+  width: 100%;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.25s;
+  opacity: 0;
+}
+.menu-ul a {
+  background: #f2f2f2;
+  padding: 4%;
+  border-top: 1px solid white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-ul img {
+  margin-right: 5%;
+  width: 7.5%;
+}
+.menu-li-blue a {
+  background-color: #eefeff;
+}
+.menu-ul-li-white a{
+    background-color: #ffffff;
+}
+.display {
+  padding: 4%;
+  border-top: 1px solid white;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  cursor: pointer;
+  background: #f2f2f2;
+  transition: background-color 250ms;
+  justify-content: space-between;
+}
+.display img {
+  margin-right: 5%;
+}
+.display span {
+  margin-right: 15%;
+  max-width: 60%;
+}
+.display:active {
+  background: #f2f2f2;
+}
+.list a {
+  background: #ffffff;
+}
+
+.list-transition-enter,
+.list-transition-appear {
+  height: 0;
+  color: transparent;
+  background-color: white;
+  overflow: hidden;
+  transition: all 1s ease-out;
+}
+.list-transition-enter-active,
+.list-transition-appear-active {
+  height: 100%;
+  color: black;
+  background-color: white;
+  transition: all 1s ease-out;
+}
+.list-transition-exit {
+  height: 0;
+  color: transparent;
+  background-color: white;
+  transition: all 1s ease-in;
+}
+.list-transition-exit-active {
+  height: auto;
+  color: black;
+  background-color: white;
+  overflow: hidden;
+  transition: all 1s ease-in;
+}

@@ -28,7 +28,10 @@ export default class PostFeed extends React.Component {
                         <span>Поделись новостью!</span>
                     </div>
                     {this.state.isOpen && <PostForm />}
-                    <AllPost />
+                    <div className="all-post">
+                        <AllPost />
+                    </div>
+                    
                 </div>
             </div>
         );

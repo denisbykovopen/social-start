@@ -17,31 +17,31 @@ import SettingPrivacy from '../../Assets/settings_and_privacy.svg';
 const Menu = () => (
   <div className="menu">
     <ul className="menu-ul">
-      <li>
-        <NavLink to={ROUTES.SIGN_IN}>
+      <li className="menu-ul-li-white">
+        <NavLink to={ROUTES.SIGN_IN} >
           <img src={LoginImg} alt="LoginImg" />
           Войти/Зарегистрироваться
         </NavLink>
       </li>
-      <li>
+      <li className="menu-ul-li-white">
         <NavLink to={ROUTES.SUBSCRIBERS}>
           <img src={Subscribers} alt="Subscribers" />
           Мои подписчики
         </NavLink>
       </li>
-      <li>
+      <li className="menu-ul-li-white">
         <NavLink to={ROUTES.REVIEWS}>
           <img src={Reviews} alt="Reviews" />
           Мои отзывы
         </NavLink>
       </li>
-      <li>
+      <li className="menu-ul-li-white">
         <NavLink to={ROUTES.FAVORITES}>
           <img src={Favorites} alt="Favorites" />
           Мои избранные
         </NavLink>
       </li>
-      <li>
+      <li className="menu-li-blue">
         <NavLink to={ROUTES.CATALOG}>
           <img src={HelpIn} alt="HelpIn" />
           Помощь в подборе котенка

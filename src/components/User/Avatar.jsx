@@ -1,5 +1,5 @@
-import React from "react";
-import ReactAvatarEditor from "react-avatar-editor";
+import React from 'react';
+import ReactAvatarEditor from 'react-avatar-editor';
 import UserGray from '../../Assets/user_gray.svg';
 import Camera from '../../Assets/camera.svg';
 
@@ -13,12 +13,18 @@ export default class App extends React.Component {
     borderRadius: 100,
     preview: null,
     width: 125,
-    height: 125
+    height: 125,
   };
 
   handleNewImage = e => {
     this.setState({ image: e.target.files[0] });
     console.log('console', this.state.image);
+    const accept = e.target.files[0];
+    if (!accept.type.match('image/*')) {
+      alert('только изображения');
+      return;
+    }
+    e.preventDefault();
   };
 
   handleScale = e => {
@@ -49,21 +55,18 @@ export default class App extends React.Component {
           />
           <div className="image-upload">
             <label htmlFor="file-input">
-                <img
-                    src={Camera}
-                    alt="New avatar"
-                />
+              <img src={Camera} alt="New avatar" />
             </label>
             <input
-                id="file-input"
-                type="file" 
-                onChange={this.handleNewImage} 
-                // capture style={{display: 'none'}}  
+              id="file-input"
+              type="file"
+              onChange={this.handleNewImage}
+              accept="image/*"
+              // capture style={{display: 'none'}}
             />
           </div>
-          
         </div>
-       
+
         {/* Zoom:
         <input
           name="scale"
@@ -78,4 +81,3 @@ export default class App extends React.Component {
     );
   }
 }
-
