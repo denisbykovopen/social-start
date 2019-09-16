@@ -1,48 +1,51 @@
 import React from 'react';
-import Avatar from './Avatar';
-import ImageBG from './ImageBG';
-import UserDetails from './UserDetails';
+import Avatar from './Avatar/index';
+import ImageBg from './ImageBg/index';
+import UserDetails from './UserDetails/index';
 
 import ReviewsColor from '../../Assets/reviews.svg';
 import SubscribersColor from '../../Assets/manufacturers-1.svg';
 import FavoritesColor from '../../Assets/featured.svg';
 import * as ROUTES from '../../constants/routes';
 import { NavLink } from 'react-router-dom';
-import Gallery from './Gallery';
-import PostFeed from './PostsFeed';
+
+import PostFeed from './PostFeed/index';
 import About from './About/index';
 import Contacts from './Contacts/index';
+import FourMedia from './FourMedia';
+
+import './User.css';
 
 const UserPage = () => (
   <div className="user-page">
     <div className="user-page-inner">
-    <div className="plank"></div>
-      <ImageBG />
+      <div className="plank"></div>
+      <ImageBg />
       <Avatar />
       <UserDetails />
       <div className="user-nav">
-              <li>
-                <NavLink to={ROUTES.SUBSCRIBERS}>
-                  <img src={SubscribersColor} alt="Subscribers" />
-                  <span>Подписки</span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={ROUTES.REVIEWS}>
-                  <img src={ReviewsColor} alt="Reviews" />
-                  <span>Отзывы</span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={ROUTES.FAVORITES}>
-                  <img src={FavoritesColor} alt="Favorites" />
-                  <span>Избранные</span>
-                </NavLink>
-              </li>
+        <li>
+          <NavLink to={ROUTES.SUBSCRIBERS}>
+            <img src={SubscribersColor} alt="Subscribers" />
+            <span>Подписки</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to={ROUTES.REVIEWS}>
+            <img src={ReviewsColor} alt="Reviews" />
+            <span>Отзывы</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to={ROUTES.FAVORITES}>
+            <img src={FavoritesColor} alt="Favorites" />
+            <span>Избранные</span>
+          </NavLink>
+        </li>
       </div>
-     
+
       <div className="plank"></div>
-      <Gallery />
+      <FourMedia />
       <div className="plank"></div>
       <About />
       <div className="plank"></div>

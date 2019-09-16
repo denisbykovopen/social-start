@@ -2,31 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-// import store from './store';
 import App from './components/App';
-// import Firebase, { FirebaseContext } from './components/Firebase';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import "typeface-roboto";
+import 'typeface-roboto';
 
 import postReducer from './Reducers/PostReducer';
-
 import { createStore, applyMiddleware } from 'redux';
 
-
-
-
-  const store = createStore(postReducer, composeWithDevTools(
-    applyMiddleware(thunk),
-  ));
+const store = createStore(
+  postReducer,
+  composeWithDevTools(applyMiddleware(thunk)),
+);
 
 ReactDOM.render(
   <Provider store={store}>
-    {/* <FirebaseContext.Provider value={new Firebase()}> */}
-      <App />
-    {/* </FirebaseContext.Provider> */}
-   </Provider>,
-  // <App />,
+    <App />
+  </Provider>,
   document.getElementById('root'),
 );
 

@@ -18,7 +18,7 @@ const Menu = () => (
   <div className="menu">
     <ul className="menu-ul">
       <li className="menu-ul-li-white">
-        <NavLink to={ROUTES.SIGN_IN} >
+        <NavLink to={ROUTES.SIGN_IN}>
           <img src={LoginImg} alt="LoginImg" />
           Войти/Зарегистрироваться
         </NavLink>
@@ -54,7 +54,7 @@ const Menu = () => (
         </NavLink>
       </li>
       <li>
-        <a href="">
+        <a href="youtube.com">
           <img src={YouTube} alt="YouTube" />
           <span>Видео о проекте</span>
         </a>
@@ -80,7 +80,7 @@ const Menu = () => (
         />
       </li>
       <li>
-        <a>
+        <a href="exit">
           <img src={Exit} alt="Exit" />
           Выход
         </a>
@@ -88,7 +88,5 @@ const Menu = () => (
     </ul>
   </div>
 );
-
-
 
 export default Menu;

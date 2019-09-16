@@ -1,0 +1,26 @@
+/* Avatar */
+.avatar {
+  position: absolute;
+  z-index: 9;
+  top: 25%;
+  left: 3%;
+}
+.avatar-inner {
+  position: relative;
+}
+.canvas {
+  width: 100%;
+  height: auto;
+  max-width: 100vw;
+  margin: auto;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+.image-upload > input {
+  display: none;
+}
+.image-upload {
+  position: absolute;
+  top: 70%;
+  left: 65%;
+}

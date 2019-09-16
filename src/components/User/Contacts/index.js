@@ -7,7 +7,7 @@ import Phone from '../../../Assets/Phone.svg';
 import Whatsapp from '../../../Assets/Whatsapp.svg';
 import Messanger from '../../../Assets/Messenger.svg';
 import Viber from '../../../Assets/Viber.svg';
-import AddButton from  '../../../Assets/AddButton.svg';
+import AddButton from '../../../Assets/AddButton.svg';
 
 class Contacts extends React.Component {
   state = {
@@ -46,7 +46,7 @@ class Contacts extends React.Component {
               alt="Phone"
               className="contacts-inner-img"
             />
-              <span>Телефон</span>
+            <span>Телефон</span>
           </div>
           <div className="contacts-inner">
             <img

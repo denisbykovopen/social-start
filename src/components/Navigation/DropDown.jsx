@@ -4,7 +4,6 @@ import ArrowDown from '../../Assets/arrow_down_gray.svg';
 import ArrowUp from '../../Assets/arrow_up_gray.svg';
 import { NavLink } from 'react-router-dom';
 
-
 export default class DropDown extends Component {
   constructor(props) {
     super(props);

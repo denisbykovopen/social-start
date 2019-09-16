@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactAvatarEditor from 'react-avatar-editor';
-import UserGray from '../../Assets/user_gray.svg';
-import Camera from '../../Assets/camera.svg';
+import UserGray from '../../../Assets/user_gray.svg';
+import Camera from '../../../Assets/camera.svg';
+import './Avatar.css';
 
 export default class App extends React.Component {
   state = {

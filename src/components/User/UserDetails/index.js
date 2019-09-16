@@ -1,8 +1,9 @@
 import React from 'react';
 import StarRatingComponent from 'react-star-rating-component';
-import Mistake from '../../Assets/mistake.svg';
-import RatingGray from '../../Assets/TrueStarGray.svg';
-import RatingActive from '../../Assets/TrueStarActive.svg';
+import Mistake from '../../../Assets/mistake.svg';
+import RatingGray from '../../../Assets/TrueStarGray.svg';
+import RatingActive from '../../../Assets/TrueStarActive.svg';
+import './UserDetails.css';
 
 export default class UserDetails extends React.Component {
   constructor(props) {
@@ -11,9 +12,9 @@ export default class UserDetails extends React.Component {
       rating_custom_icon: 3,
     };
   }
-  onStarClick(nextValue, prevValue, name) {
-    this.setState({ rating: nextValue });
-  }
+  // onStarClick(nextValue, prevValue, name) {
+  //   this.setState({ rating: nextValue });
+  // }
   onStarClickCustomIcon(nextValue, prevValue, name) {
     this.setState({ rating_custom_icon: nextValue });
   }
@@ -29,17 +30,15 @@ export default class UserDetails extends React.Component {
         <div className="user-rating">
           <StarRatingComponent
             className={'stars'}
-            // editing={false}
+            editing={false}
             name="stars"
             value={rating_custom_icon}
-            onStarClick={this.onStarClickCustomIcon.bind(this)}
-            renderStarIcon={() => <img src={RatingGray} />}
-            starColor="#f00"
+            // onStarClick={this.onStarClickCustomIcon.bind(this)}
             renderStarIcon={(index, value) => {
               if (index <= value) {
-                return <img src={RatingActive} />;
+                return <img src={RatingActive} alt="*" />;
               }
-              return <img src={RatingGray} />;
+              return <img src={RatingGray} alt="*" />;
             }}
           />
           <span>{rating_custom_icon} отзывов</span>

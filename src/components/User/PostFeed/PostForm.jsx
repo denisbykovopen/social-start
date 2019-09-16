@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Camera from '../../Assets/camera.svg';
+import Camera from '../../../Assets/camera.svg';
 
 class PostForm extends Component {
   constructor(props) {
@@ -42,7 +42,9 @@ class PostForm extends Component {
     });
     // this.getTitle.value = '';
     this.getMessage.value = '';
-    this.state.images = [];
+    this.setState = {
+      images: [],
+    };
   };
   render() {
     return (

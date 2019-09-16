@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Camera from '../../Assets/camera.svg';
+import Camera from '../../../Assets/camera.svg';
 
 class EditComponent extends Component {
   handleEdit = e => {
@@ -28,7 +28,7 @@ class EditComponent extends Component {
             defaultValue={this.props.post.title}
             placeholder="Enter Post Title"
           />
-        
+
           <textarea
             required
             rows="5"
@@ -38,21 +38,18 @@ class EditComponent extends Component {
             placeholder="Enter Post"
           />
           <div className="image-upload-constructor">
-                    <label htmlFor="image-input-constructor">
-                      <div className="image-input-constructor-inner">
-                        <img
-                            src={Camera}
-                            alt="New avatar"
-                        />
-                        <span>Добавить фото</span>
-                        </div>
-                    </label>
-                    <input
-                        id="image-input-constructor"
-                        type="file" 
-                        onChange={this.setImages}
-                        // capture style={{display: 'none'}}  
-                    />
+            <label htmlFor="image-input-constructor">
+              <div className="image-input-constructor-inner">
+                <img src={Camera} alt="New avatar" />
+                <span>Добавить фото</span>
+              </div>
+            </label>
+            <input
+              id="image-input-constructor"
+              type="file"
+              onChange={this.setImages}
+              // capture style={{display: 'none'}}
+            />
           </div>
           <button className="post-form-button">Update</button>
         </form>

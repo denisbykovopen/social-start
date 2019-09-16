@@ -1,6 +1,7 @@
 import React from 'react';
-import Edit from '../../Assets/edit.svg';
-import SettingsModal from './SettingsModal';
+import Edit from '../../../Assets/edit.svg';
+import SettingsModal from '../SettingsModal';
+import './FourMedia.css';
 
 let imgUrls = [
   'https://source.unsplash.com/3Z70SDuYs5g/320x240',
@@ -54,7 +55,7 @@ class GalleryImage extends React.Component {
 //   }
 // }
 
-export default class Gallery extends React.Component {
+export default class FourMedia extends React.Component {
   constructor(props) {
     super(props);
 
@@ -70,19 +71,19 @@ export default class Gallery extends React.Component {
   }
   handleSettings = () => {
     this.setState(prevState => ({
-      showSettings: !prevState.showSettings
+      showSettings: !prevState.showSettings,
     }));
-}
+  };
 
   render() {
     return (
       <>
         <div className="edit-heading">
           <h3>Фотогалерея</h3>
-          <img 
-            src={Edit} 
-            alt="edit" 
-            onClick={this.handleSettings} 
+          <img
+            src={Edit}
+            alt="edit"
+            onClick={this.handleSettings}
             className="edit-button"
           />
           {this.state.showSettings && <SettingsModal />}
@@ -145,5 +146,3 @@ export default class Gallery extends React.Component {
     });
   }
 }
-
-
