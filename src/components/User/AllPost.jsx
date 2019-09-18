@@ -7,10 +7,7 @@ class AllPost extends Component {
     return (
       <div className="all-post">
         {this.props.posts.map(post => (
-          <div 
-            key={post.id}
-            className="all-post-main"
-          >
+          <div key={post.id} className="all-post-main">
             {post.editing ? (
               <EditComponent post={post} key={post.id} />
             ) : (
@@ -23,9 +20,5 @@ class AllPost extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    posts: state,
-  };
-};
+const mapStateToProps = ({ posts }) => ({ posts });
 export default connect(mapStateToProps)(AllPost);

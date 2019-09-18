@@ -1,7 +1,7 @@
 // import PropTypes from "prop-types";
 import React from "react";
 import Gallery from "react-grid-gallery";
-import Edit from '../../Assets/edit.svg';
+import Edit from '../../assets/edit.svg';
 
 export default class PhotoGallery extends React.Component {
   constructor(props) {

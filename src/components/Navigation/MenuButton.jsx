@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import BurgerMenu from '../../Assets/burger_menu.svg';
-import CloseMenu from '../../Assets/close_menu.svg';
+import BurgerMenu from '../../assets/burger_menu.svg';
+import CloseMenu from '../../assets/close_menu.svg';
 import Menu from './Menu';
 
 export default class MenuButton extends Component {

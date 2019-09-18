@@ -2,17 +2,17 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import '../../index.css';
-import LoginImg from '../../Assets/login_register.svg';
-import Subscribers from '../../Assets/menu_manufacturers_small.svg';
-import Reviews from '../../Assets/menu_my_review.svg';
-import Favorites from '../../Assets/menu_featured_small.svg';
-import HelpIn from '../../Assets/help_in_choosing_a_kitten.svg';
-import Complain from '../../Assets/complain_small.svg';
-import YouTube from '../../Assets/youtube.svg';
+import LoginImg from '../../assets/login_register.svg';
+import Subscribers from '../../assets/menu_manufacturers_small.svg';
+import Reviews from '../../assets/menu_my_review.svg';
+import Favorites from '../../assets/menu_featured_small.svg';
+import HelpIn from '../../assets/help_in_choosing_a_kitten.svg';
+import Complain from '../../assets/complain_small.svg';
+import YouTube from '../../assets/youtube.svg';
 import DropDown from './DropDown';
-import Exit from '../../Assets/exit.svg';
-import HelpSupport from '../../Assets/help_and_support.svg';
-import SettingPrivacy from '../../Assets/settings_and_privacy.svg';
+import Exit from '../../assets/exit.svg';
+import HelpSupport from '../../assets/help_and_support.svg';
+import SettingPrivacy from '../../assets/settings_and_privacy.svg';
 
 const Menu = () => (
   <div className="menu">
@@ -54,7 +54,7 @@ const Menu = () => (
         </NavLink>
       </li>
       <li>
-        <a href="">
+        <a href="https://youtube.com">
           <img src={YouTube} alt="YouTube" />
           <span>Видео о проекте</span>
         </a>
@@ -80,7 +80,7 @@ const Menu = () => (
         />
       </li>
       <li>
-        <a>
+        <a href="/">
           <img src={Exit} alt="Exit" />
           Выход
         </a>

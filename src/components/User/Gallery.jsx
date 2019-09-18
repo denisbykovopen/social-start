@@ -1,5 +1,5 @@
 import React from "react";
-import Edit from '../../Assets/edit.svg';
+import Edit from '../../assets/edit.svg';
 
 let imgUrls = [
   "https://source.unsplash.com/3Z70SDuYs5g/320x240",

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Camera from '../../Assets/camera.svg';
+import Camera from '../../assets/camera.svg';
 
 class PostForm extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class PostForm extends Component {
       file: '',
       images: []
     }
-    this.fileReader = new FileReader;
+    this.fileReader = new FileReader();
   }
   setImages = (e) => {
     e.preventDefault();

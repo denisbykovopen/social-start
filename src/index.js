@@ -8,23 +8,21 @@ import App from './components/App';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import postReducer from './Reducers/PostReducer';
+import rootReducer from './reducers';
 
 import { createStore, applyMiddleware } from 'redux';
 
-
-
-
-  const store = createStore(postReducer, composeWithDevTools(
-    applyMiddleware(thunk),
-  ));
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk)),
+);
 
 ReactDOM.render(
   <Provider store={store}>
     {/* <FirebaseContext.Provider value={new Firebase()}> */}
-      <App />
+    <App />
     {/* </FirebaseContext.Provider> */}
-   </Provider>,
+  </Provider>,
   // <App />,
   document.getElementById('root'),
 );

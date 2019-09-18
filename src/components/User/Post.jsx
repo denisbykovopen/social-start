@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import UserAvatar from '../../Assets/empty-avatar.svg';
+import UserAvatar from '../../assets/empty-avatar.svg';
 
 class Post extends Component {
   state = {
