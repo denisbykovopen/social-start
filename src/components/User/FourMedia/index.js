@@ -1,5 +1,5 @@
 import React from 'react';
-import Edit from '../../../Assets/edit.svg';
+import Edit from '../../../assets/edit.svg';
 import SettingsModal from '../SettingsModal';
 import './FourMedia.css';
 

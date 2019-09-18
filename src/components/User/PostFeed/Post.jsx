@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import UserAvatar from '../../../Assets/empty-avatar.svg';
-import CheckingGray from '../../../Assets/checkin_grey.svg';
-import Timing from '../../../Assets/Timing.svg';
-import Edit from '../../../Assets/edit.svg';
+import UserAvatar from '../../../assets/empty-avatar.svg';
+import CheckingGray from '../../../assets/checkin_grey.svg';
+import Timing from '../../../assets/Timing.svg';
+import Edit from '../../../assets/edit.svg';
 
 class Post extends Component {
   state = {

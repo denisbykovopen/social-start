@@ -1,13 +1,13 @@
 import React from 'react';
-import Edit from '../../../Assets/edit.svg';
+import Edit from '../../../assets/edit.svg';
 import SettingsModal from '../SettingsModal';
 import './Contacts.css';
-import Email from '../../../Assets/Email.svg';
-import Phone from '../../../Assets/Phone.svg';
-import Whatsapp from '../../../Assets/Whatsapp.svg';
-import Messanger from '../../../Assets/Messenger.svg';
-import Viber from '../../../Assets/Viber.svg';
-import AddButton from '../../../Assets/AddButton.svg';
+import Email from '../../../assets/Email.svg';
+import Phone from '../../../assets/Phone.svg';
+import Whatsapp from '../../../assets/Whatsapp.svg';
+import Messanger from '../../../assets/Messenger.svg';
+import Viber from '../../../assets/Viber.svg';
+import AddButton from '../../../assets/AddButton.svg';
 
 class Contacts extends React.Component {
   state = {

@@ -1,6 +1,6 @@
 import React from 'react';
-import DownLoad from '../../../Assets/download.svg';
-import Camera from '../../../Assets/camera.svg';
+import DownLoad from '../../../assets/download.svg';
+import Camera from '../../../assets/camera.svg';
 import './ImageBg.css';
 
 export default class ImageBg extends React.Component {

@@ -37,14 +37,15 @@ h1 {
   line-height: 100%;
   color: #2b2323;
 }
+
 h2 {
-  font-family: 'Roboto';
   font-style: bold;
   font-size: 18px;
   line-height: 25.31px;
   line-height: 120%;
   color: #2b2323;
 }
+
 h3 {
   font-family: 'Roboto';
   font-style: regular;
@@ -53,22 +54,15 @@ h3 {
   line-height: 140.62%;
   color: #2b2323;
 }
-* {
-  font-family: 'Roboto';
-  font-style: regular;
-  font-size: 14px;
-  line-height: 16.41px;
-  line-height: 100%;
-}
+
 .button {
-  font-family: 'Roboto';
   font-style: bold;
   font-size: 16px;
   line-height: 18.75px;
   line-height: 100%;
 }
+
 .additional-text {
-  font-family: 'Roboto';
   font-style: regular;
   font-size: 12px;
   line-height: 14.06px;

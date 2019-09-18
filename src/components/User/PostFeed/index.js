@@ -1,5 +1,5 @@
 import React from 'react';
-import UserAvatar from '../../../Assets/empty-avatar.svg';
+import UserAvatar from '../../../assets/empty-avatar.svg';
 import PostForm from './PostForm';
 import AllPost from './AllPost';
 import './PostFeed.css';

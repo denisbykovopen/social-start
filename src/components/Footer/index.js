@@ -2,11 +2,11 @@ import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import './Footer.css';
-import LogoDesk from '../../Assets/logo_Desk.svg';
-import EmailSmall from '../../Assets/email_small.svg';
-import PhoneSmall from '../../Assets/Связаться.svg';
-import InstaFooter from '../../Assets/Instagram_footer.svg';
-import FaceFooter from '../../Assets/Facebook_footer.svg';
+import LogoDesk from '../../assets/logo_Desk.svg';
+import EmailSmall from '../../assets/email_small.svg';
+import PhoneSmall from '../../assets/Связаться.svg';
+import InstaFooter from '../../assets/Instagram_footer.svg';
+import FaceFooter from '../../assets/Facebook_footer.svg';
 
 export default class Footer extends React.Component {
   render() {
