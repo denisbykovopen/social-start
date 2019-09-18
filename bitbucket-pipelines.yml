@@ -6,8 +6,8 @@
 image: nikolaik/python-nodejs
 
 pipelines:
-  tags:
-    'build-*':
+  branches:
+    master:
       - step:
           name: build and deploy
           caches:
