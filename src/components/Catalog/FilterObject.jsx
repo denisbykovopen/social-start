@@ -31,7 +31,7 @@ export default class extends React.Component {
             (this.props.children ? (
               <div>{this.props.children}</div>
             ) : (
-              this.props.labels.map(label => (
+              this.props.labels.values.map(label => (
                 <Checkbox
                   key={label.id}
                   label={label}

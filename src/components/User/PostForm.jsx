@@ -11,7 +11,7 @@ class PostForm extends Component {
     }
     this.fileReader = new FileReader();
   }
-  setImages = (e) => {
+  setImages = e => {
     e.preventDefault();
     // this.setState({images: []});
     // const imageFiles = e.target.files;
@@ -28,13 +28,15 @@ class PostForm extends Component {
     // }
     if (e.target.files && e.target.files[0]) {
       let reader = new FileReader();
-      reader.onload = (e) => {
-        this.setState({images: this.state.images.concat(e.target.result)});
+      reader.onload = e => {
+        this.setState({
+          images: this.state.images.concat(e.target.result),
+        });
       };
       reader.readAsDataURL(e.target.files[0]);
     }
-  }
-  handleSubmit = (e) => {
+  };
+  handleSubmit = e => {
     e.preventDefault();
     const title = this.getTitle.value;
     const message = this.getMessage.value;
@@ -45,7 +47,7 @@ class PostForm extends Component {
       title,
       message,
       editing: false,
-      images
+      images,
     };
     this.props.dispatch({
       type: 'ADD_POST',

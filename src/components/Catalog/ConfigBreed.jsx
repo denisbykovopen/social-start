@@ -12,8 +12,8 @@ import './catalog.css';
 import backArrow from '../../assets/back_arrow.svg';
 
 const Breed = props => {
-  const submitBreed = breedId => {
-    props.configBreed(breedId);
+  const submitBreed = breed => {
+    props.configBreed(breed);
     props.history.push('/catalog/goal');
   };
 

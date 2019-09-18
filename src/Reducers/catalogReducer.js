@@ -1,14 +1,12 @@
 import ACTION from '../actions/actionTypes';
 
 const initialState = {
-  breed: 1,
-  goal: 'sdf',
-  sex: 3,
-  age: {
-    min: 1,
-    max: 3,
-  },
-  registration: '',
+  country: 1,
+  breed: null,
+  goal: null,
+  sex: null,
+  age: null,
+  registration: null,
   configData: {},
   loading: true,
   error: '',

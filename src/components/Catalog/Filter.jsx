@@ -7,7 +7,9 @@ import {
   configAge,
   configBreed,
   configSex,
+  getCatalogPosts,
 } from '../../actions/actionCreators';
+import apiURL from '../../constants/apiURL';
 
 const Filter = ({
   breed,
@@ -20,6 +22,7 @@ const Filter = ({
   configSex,
   configAge,
   closeFilter,
+  getCatalogPosts,
 }) => (
   <div className="catalog-filter">
     <div className="catalog-filter-header">
@@ -39,13 +42,13 @@ const Filter = ({
     <div className="catalog-filter-options">
       <FilterObject
         title={breeds.label}
-        labels={breeds.values}
+        labels={breeds}
         checkedOptionId={breed}
         updateParam={configBreed}
       />
       <FilterObject
         title={sexes.label}
-        labels={sexes.values}
+        labels={sexes}
         checkedOptionId={sex}
         updateParam={configSex}
       />
@@ -55,7 +58,10 @@ const Filter = ({
       <FilterObject title="Страна" labels={[]} />
     </div>
     <div className="catalog-filter-footer">
-      <button className="catalog-filter-footer-button submit">
+      <button
+        onClick={() => getCatalogPosts(apiURL)}
+        className="catalog-filter-footer-button submit"
+      >
         Показать
       </button>
       <button className="catalog-filter-footer-button cancel">
@@ -77,5 +83,11 @@ const mapStateToProps = ({
 
 export default connect(
   mapStateToProps,
-  { configRegistration, configBreed, configSex, configAge },
+  {
+    configRegistration,
+    configBreed,
+    configSex,
+    configAge,
+    getCatalogPosts,
+  },
 )(Filter);

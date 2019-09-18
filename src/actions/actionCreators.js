@@ -15,7 +15,26 @@ const getConfigDataFailure = error => ({
   error,
 });
 
-export const getConfigData = () => (dispatch, getState) => {
+const prepareParams = ({
+  catalog: { country, breed, goal, sex, age, configData },
+}) => ({
+  country,
+  [configData.breeds.element_name]: breed,
+  [configData.groups.element_name]: goal,
+  [configData.sexes.element_name]: sex,
+  [configData.age.element_name]: age,
+  page: 1,
+  limit: 30,
+});
+
+export const getCatalogPosts = apiURL => (dispatch, getState) => {
+  const params = prepareParams(getState());
+  axios
+    .get(`${apiURL}/search`, { params })
+    .then(({ data }) => console.log(data));
+};
+
+export const getConfigData = apiURL => (dispatch, getState) => {
   const {
     catalog: { configData },
   } = getState();
@@ -23,7 +42,7 @@ export const getConfigData = () => (dispatch, getState) => {
 
   dispatch(getConfigDataLoading());
   axios
-    .get('http://3.225.23.38/api/event/constructor')
+    .get(`${apiURL}/constructor`)
     .then(({ data: { constructor: { parameters } } }) => {
       const configData = {
         sexes: {

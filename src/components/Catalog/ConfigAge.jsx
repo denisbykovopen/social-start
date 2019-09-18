@@ -21,38 +21,6 @@ class Age extends React.Component {
     }
   };
 
-  // setMinAge = ({ target: { value } }) => {
-  //   const { ageValue } = this.state;
-
-  //   if (value === '') {
-  //     this.setState({ ageValue: { ...ageValue, min: '' } });
-  //     return;
-  //   }
-
-  //   if (!+value || value > ageValue.max || value.length > 1) {
-  //     this.setState({ ageValue: { ...ageValue, min: 1 } });
-  //     return;
-  //   }
-
-  //   this.setState({ ageValue: { ...ageValue, min: +value } });
-  // };
-
-  // setMaxAge = ({ target: { value } }) => {
-  //   const { ageValue } = this.state;
-
-  //   if (value === '') {
-  //     this.setState({ ageValue: { ...ageValue, max: '' } });
-  //     return;
-  //   }
-
-  //   if (!+value || value < ageValue.min || value.length > 1) {
-  //     this.setState({ ageValue: { ...ageValue, max: 3 } });
-  //     return;
-  //   }
-
-  //   this.setState({ ageValue: { ...ageValue, max: +value } });
-  // };
-
   onAgeValueChange = ageValue => this.setState({ ageValue });
 
   goBack = () => {
@@ -78,7 +46,10 @@ class Age extends React.Component {
           </div>
         </div>
         <div className="catalog-config-age-block">
-          <AgeInput ageValue={ageValue} modifyAgeValue={this.onAgeValueChange} />
+          <AgeInput
+            ageValue={ageValue}
+            modifyAgeValue={this.onAgeValueChange}
+          />
           <button
             onClick={this.submitAge}
             className="catalog-config-submit"
@@ -92,11 +63,10 @@ class Age extends React.Component {
 }
 
 export default connect(
-  ({ catalog: { goal, sex, age, configData } }) => ({
+  ({ catalog: { goal, sex, age } }) => ({
     goal,
     sex,
     age,
-    configData,
   }),
   { configAge },
 )(Age);

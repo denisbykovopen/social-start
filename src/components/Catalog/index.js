@@ -6,6 +6,7 @@ import CatalogList from './CatalogList';
 import { getConfigData } from '../../actions/actionCreators';
 import HelpModal from '../Modals/HelpModal';
 import withModal from '../../hoc/withModal';
+import apiURL from '../../constants/apiURL';
 
 import configCatImg from '../../assets/configCat.svg';
 import individualCatImg from '../../assets/individualCat.svg';
@@ -40,7 +41,7 @@ class CatalogPage extends React.Component {
   };
 
   componentDidMount() {
-    this.props.getConfigData();
+    this.props.getConfigData(apiURL);
   }
 
   toggleView = () => {
@@ -61,7 +62,7 @@ class CatalogPage extends React.Component {
     return (
       <div>
         {isFilterOpen && <Filter closeFilter={this.closeFilter} />}
-        <div style={{padding: '20px 15px'}}>
+        <div style={{ padding: '20px 15px' }}>
           <div>
             <button
               className="catalog-topNav-button"
