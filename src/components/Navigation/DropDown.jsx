@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import ArrowDown from '../../Assets/arrow_down_gray.svg';
-import ArrowUp from '../../Assets/arrow_up_gray.svg';
+import ArrowDown from '../../assets/arrow_down_gray.svg';
+import ArrowUp from '../../assets/arrow_up_gray.svg';
 import { NavLink } from 'react-router-dom';
 
 export default class DropDown extends Component {

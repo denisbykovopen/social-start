@@ -3,9 +3,9 @@ import Avatar from './Avatar/index';
 import ImageBg from './ImageBg/index';
 import UserDetails from './UserDetails/index';
 
-import ReviewsColor from '../../Assets/reviews.svg';
-import SubscribersColor from '../../Assets/manufacturers-1.svg';
-import FavoritesColor from '../../Assets/featured.svg';
+import ReviewsColor from '../../assets/reviews.svg';
+import SubscribersColor from '../../assets/manufacturers-1.svg';
+import FavoritesColor from '../../assets/featured.svg';
 import * as ROUTES from '../../constants/routes';
 import { NavLink } from 'react-router-dom';
 

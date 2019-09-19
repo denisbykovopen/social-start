@@ -1,8 +1,8 @@
 import React from 'react';
 import StarRatingComponent from 'react-star-rating-component';
-import Mistake from '../../../Assets/mistake.svg';
-import RatingGray from '../../../Assets/TrueStarGray.svg';
-import RatingActive from '../../../Assets/TrueStarActive.svg';
+import Mistake from '../../../assets/mistake.svg';
+import RatingGray from '../../../assets/TrueStarGray.svg';
+import RatingActive from '../../../assets/TrueStarActive.svg';
 import './UserDetails.css';
 
 export default class UserDetails extends React.Component {

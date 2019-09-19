@@ -7,11 +7,12 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import 'typeface-roboto';
 
-import postReducer from './Reducers/PostReducer';
+import rootReducer from './reducers';
+
 import { createStore, applyMiddleware } from 'redux';
 
 const store = createStore(
-  postReducer,
+  rootReducer,
   composeWithDevTools(applyMiddleware(thunk)),
 );
 

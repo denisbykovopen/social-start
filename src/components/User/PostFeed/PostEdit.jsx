@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Camera from '../../../Assets/camera.svg';
+import Camera from '../../../assets/camera.svg';
 
 class PostEdit extends Component {
   handleEdit = e => {

@@ -2,11 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import './Navigation.css';
-import Logo from '../../Assets/logo_mob.svg';
-import Catalog from '../../Assets/configurator_menu.svg';
-import Search from '../../Assets/search_menu.svg';
-import UserAvatar from '../../Assets/empty-avatar.svg';
-import Notifications from '../../Assets/alert_menu.svg';
+import Logo from '../../assets/logo_mob.svg';
+import Catalog from '../../assets/configurator_menu.svg';
+import Search from '../../assets/search_menu.svg';
+import UserAvatar from '../../assets/empty-avatar.svg';
+import Notifications from '../../assets/alert_menu.svg';
 import MenuButton from './MenuButton';
 
 const Navigation = () => (
