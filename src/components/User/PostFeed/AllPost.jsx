@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Post from './Post';
-import EditComponent from './EditComponent';
+import PostEdit from './PostEdit';
 
 class AllPost extends Component {
   render() {
@@ -10,7 +10,7 @@ class AllPost extends Component {
         {this.props.posts.map(post => (
           <div key={post.id} className="all-post-main">
             {post.editing ? (
-              <EditComponent post={post} key={post.id} />
+              <PostEdit post={post} key={post.id} />
             ) : (
               <Post post={post} key={post.id} />
             )}

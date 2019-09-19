@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Camera from '../../../Assets/camera.svg';
 
-class EditComponent extends Component {
+class PostEdit extends Component {
   handleEdit = e => {
     e.preventDefault();
     const newTitle = this.getTitle.value;
@@ -57,4 +57,4 @@ class EditComponent extends Component {
     );
   }
 }
-export default connect()(EditComponent);
+export default connect()(PostEdit);
