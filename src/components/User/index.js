@@ -23,7 +23,7 @@ const UserPage = () => (
       <ImageBg />
       <Avatar />
       <UserDetails />
-      <div className="user-nav">
+      <ul className="user-nav">
         <li>
           <NavLink to={ROUTES.SUBSCRIBERS}>
             <img src={SubscribersColor} alt="Subscribers" />
@@ -42,7 +42,7 @@ const UserPage = () => (
             <span>Избранные</span>
           </NavLink>
         </li>
-      </div>
+      </ul>
 
       <div className="plank"></div>
       <FourMedia />

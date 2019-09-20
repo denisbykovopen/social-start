@@ -49,9 +49,9 @@ class Post extends Component {
               <div className="gallery-container-post-inner">
                 <div className="gallery-container-row-post">
                   {this.props.post.images.map((url, index, arr) => {
-                    var firstImage = arr[index];
-                    var secondImage = arr[index + 1];
-                    var thirdImage = arr[(index = 2)];
+                    let firstImage = arr[index];
+                    let secondImage = arr[index + 1];
+                    let thirdImage = arr[(index = 2)];
                     return (
                       <React.Fragment>
                         <div className="gallery-card-top">
